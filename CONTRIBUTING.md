@@ -50,7 +50,7 @@ Short overview pages may omit sections that do not apply.
 - Link to stable project pages, papers, or documentation whenever possible.
 - Explain why a resource is useful instead of listing links without context.
 - Do not copy substantial text from external resources.
-- Keep OpenAI Spinning Up linked from RL Basics as a classical RL reference.
+- Keep [OpenAI Spinning Up](https://spinningup.openai.com/en/latest/) linked from RL Basics as a classical RL reference.
 
 ## Updating Reading Lists
 
