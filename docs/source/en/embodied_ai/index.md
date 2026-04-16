@@ -1,46 +1,19 @@
 # Embodied AI Foundations
 
-## Learning Goals
+Embodied AI places learning back inside a closed-loop system composed of a body, sensors, actuators, and an environment. Compared with reinforcement learning tasks defined only over abstract states, embodied tasks are typically partially observable, constrained by low-level control and hardware interfaces, and evaluated under reset, contact, latency, and safety assumptions.
 
-This chapter connects abstract RL concepts to agents with bodies, sensors, actuators, dynamics, environmental constraints, and real experimental costs.
+This section treats embodiment as a problem setting shared by robot learning and world model research. The emphasis is not on enumerating tasks, but on making assumptions explicit: what is observed, what remains latent, how actions affect the physical system, which simulator assumptions differ from real hardware, and how evaluation protocols prevent engineering details from being mistaken for algorithmic progress.
 
-## Prerequisites
+```{toctree}
+:maxdepth: 1
+:caption: Embodied Modeling and Evaluation
 
-You should have basic background in robotics, control, reinforcement learning, and deep learning.
+embodiment_and_pomdp
+observation_action_spaces
+simulation_and_real_robot_constraints
+evaluation
+```
 
-## Core Concepts
+## Connections
 
-Embodied AI studies how agents interact with the world through a body. The body is not an implementation detail outside the algorithm; it determines action spaces, observation modes, exploration risk, and task feasibility.
-
-## Mathematical Formulation
-
-Embodied tasks are usually closer to POMDPs: the agent receives observation $o_t$, takes action $a_t$, and the true state $s_t$ may contain unmeasured contacts, object properties, or external disturbances.
-
-## Algorithms / System Design
-
-Embodied systems connect perception, state estimation, policy, low-level control, safety monitoring, and data logging. Learning algorithms must be designed together with control frequency, sensor latency, and actuator limits.
-
-## Practical Notes
-
-Simulation tasks should record physical parameters, domain randomization, control frequency, and reset logic. Real robot experiments should record hardware state, calibration, and failure recovery procedures.
-
-## Common Pitfalls
-
-- Treating privileged simulator state as an input available on real robots.
-- Ignoring control frequency and latency.
-- Reporting only successful cases without failure analysis.
-
-## Recommended Reading
-
-- Levine et al., learning hand-eye coordination.
-- Tobin et al., domain randomization.
-- OpenAI et al., dexterous manipulation from pixels.
-
-## Exercises / Research Questions
-
-Choose an embodied task and list its observations, actions, dynamics constraints, safety constraints, and evaluation metrics.
-
-## Glossary
-
-- Proprioception: self-sensing such as joint positions, velocities, and torques.
-- Sim-to-real: transferring a policy or model from simulation to real hardware.
+Embodied AI foundations connect three threads in this resource: reinforcement learning supplies the optimization language, world models provide prediction and planning interfaces, and robot learning exposes the data, control, reset, and safety constraints of physical systems.
