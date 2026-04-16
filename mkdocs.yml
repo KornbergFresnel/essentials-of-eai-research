@@ -1,0 +1,196 @@
+site_name: Essentials of Embodied AI Research
+site_url: https://essentials-of-eai-research.readthedocs.io/
+site_description: >-
+  A comprehensive learning resource for PhD students on Reinforcement Learning,
+  World Models, Embodied AI, and Distributed RL Systems.
+site_author: Ming Zhou
+repo_url: https://github.com/KornbergFresnel/essentials-of-eai-research
+repo_name: essentials-of-eai-research
+copyright: Copyright &copy; 2026 Ming Zhou
+
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.indexes
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+    - toc.follow
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: deep purple
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: deep purple
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  font:
+    text: Roboto
+    code: Roboto Mono
+  icon:
+    repo: fontawesome/brands/github
+    logo: material/robot-outline
+
+plugins:
+  - search
+  - i18n:
+      docs_structure: folder
+      fallback_to_default: true
+      reconfigure_material: true
+      languages:
+        - locale: en
+          default: true
+          name: English
+          build: true
+        - locale: zh
+          name: 中文
+          build: true
+          nav_translations:
+            Home: 首页
+            Getting Started: 开始学习
+            About This Resource: 关于本资料
+            "Part I: Reinforcement Learning": "第一部分：强化学习"
+            Overview: 概述
+            Key Concepts: 核心概念
+            Algorithm Taxonomy: 算法分类
+            Intro to Policy Optimization: 策略优化入门
+            Algorithms: 算法详解
+            Policy Gradient Methods: 策略梯度方法
+            Trust Region Methods: 信赖域方法
+            Value-Based Methods: 基于值函数的方法
+            Actor-Critic Methods: Actor-Critic 方法
+            Model-Based RL: 基于模型的强化学习
+            Offline RL: 离线强化学习
+            Key Papers: 关键论文
+            "Part II: World Models": "第二部分：世界模型"
+            What Are World Models?: 什么是世界模型？
+            Representation Learning: 表征学习
+            Video Prediction: 视频预测
+            Planning with World Models: 基于世界模型的规划
+            Foundation World Models: 基础世界模型
+            "Part III: Embodied AI": "第三部分：具身智能"
+            What Is Embodied AI?: 什么是具身智能？
+            Locomotion: 运动控制
+            Loco-Manipulation: 移动操作
+            Teleoperation: 遥操作
+            Data Collection: 数据采集
+            "Part IV: Distributed RL": "第四部分：分布式强化学习"
+            Why Distributed RL?: 为什么需要分布式？
+            Architecture Paradigms: 架构范式
+            Frameworks & Systems: 框架与系统
+            Practical Scaling Guide: 实践扩展指南
+            Resources: 学习资源
+            Becoming a Researcher: 成为研究者
+            Exercises: 练习
+            Reading List: 推荐阅读
+
+extra_css:
+  - stylesheets/extra.css
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/KornbergFresnel/essentials-of-eai-research
+
+markdown_extensions:
+  # Python Markdown
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+      toc_depth: 3
+
+  # Python Markdown Extensions
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+nav:
+  - Home: index.md
+  - Getting Started:
+    - About This Resource: introduction.md
+  - "Part I: Reinforcement Learning":
+    - Overview: rl/index.md
+    - Key Concepts: rl/key_concepts.md
+    - Algorithm Taxonomy: rl/algorithm_taxonomy.md
+    - Intro to Policy Optimization: rl/intro_policy_optimization.md
+    - Algorithms:
+      - Policy Gradient Methods: rl/policy_gradient.md
+      - Trust Region Methods: rl/trust_region.md
+      - Value-Based Methods: rl/value_based.md
+      - Actor-Critic Methods: rl/actor_critic.md
+      - Model-Based RL: rl/model_based.md
+      - Offline RL: rl/offline_rl.md
+    - Key Papers: rl/key_papers.md
+  - "Part II: World Models":
+    - Overview: world_models/index.md
+    - What Are World Models?: world_models/overview.md
+    - Representation Learning: world_models/representation_learning.md
+    - Video Prediction: world_models/video_prediction.md
+    - Planning with World Models: world_models/planning.md
+    - Foundation World Models: world_models/foundation_models.md
+    - Key Papers: world_models/key_papers.md
+  - "Part III: Embodied AI":
+    - Overview: embodied/index.md
+    - What Is Embodied AI?: embodied/overview.md
+    - Locomotion: embodied/locomotion.md
+    - Loco-Manipulation: embodied/loco_manipulation.md
+    - Teleoperation: embodied/teleoperation.md
+    - Data Collection: embodied/data_collection.md
+  - "Part IV: Distributed RL":
+    - Overview: distributed_rl/index.md
+    - Architecture Paradigms: distributed_rl/architectures.md
+    - Frameworks & Systems: distributed_rl/frameworks.md
+    - Practical Scaling Guide: distributed_rl/practice.md
+  - Resources:
+    - Becoming a Researcher: resources/researcher_guide.md
+    - Exercises: resources/exercises.md
+    - Reading List: resources/reading_list.md
