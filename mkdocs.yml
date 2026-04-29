@@ -94,6 +94,7 @@ plugins:
             Why Distributed RL?: 为什么需要分布式？
             Architecture Paradigms: 架构范式
             Frameworks & Systems: 框架与系统
+            Large-Model RL Infrastructure: 大模型 RL 基础设施
             Practical Scaling Guide: 实践扩展指南
             Resources: 学习资源
             Becoming a Researcher: 成为研究者
@@ -189,6 +190,7 @@ nav:
     - Overview: distributed_rl/index.md
     - Architecture Paradigms: distributed_rl/architectures.md
     - Frameworks & Systems: distributed_rl/frameworks.md
+    - Large-Model RL Infrastructure: distributed_rl/large_model_infra.md
     - Practical Scaling Guide: distributed_rl/practice.md
   - Resources:
     - Becoming a Researcher: resources/researcher_guide.md
