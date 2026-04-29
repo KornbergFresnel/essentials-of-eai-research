@@ -11,6 +11,7 @@ copyright: Copyright &copy; 2026 Ming Zhou
 theme:
   name: material
   language: en
+  custom_dir: overrides
   features:
     - navigation.tabs
     - navigation.tabs.sticky

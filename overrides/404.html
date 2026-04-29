@@ -1,0 +1,21 @@
+{% extends "main.html" %}
+
+{% block content %}
+  <h1>404 - Not found</h1>
+  <p>
+    The requested page could not be found. If you opened a documentation URL
+    without a trailing slash, the site will retry automatically.
+  </p>
+  <script>
+    const pathname = window.location.pathname;
+    const { search, hash } = window.location;
+
+    if (
+      !pathname.endsWith("/") &&
+      pathname.split("/").pop() &&
+      !pathname.split("/").pop().includes(".")
+    ) {
+      window.location.replace(`${pathname}/${search}${hash}`);
+    }
+  </script>
+{% endblock %}
