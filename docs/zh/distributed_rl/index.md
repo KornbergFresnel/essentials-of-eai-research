@@ -6,7 +6,10 @@
 
 1. **[架构范式](architectures.md)** — A3C、Ape-X、IMPALA、SEED RL 及其设计权衡
 2. **[框架与系统](frameworks.md)** — RLlib、Acme、EnvPool、Sample Factory 等系统
-3. **[实践扩展指南](practice.md)** — 如何高效地扩展 RL 训练
+3. **[大模型 RL 基础设施](large_model_infra.md)** — 面向 RLHF、Agentic RL 与具身训练的现代系统
+4. **[实践扩展指南](practice.md)** — 如何高效地扩展 RL 训练
+
+前两页主要讲经典分布式 RL 的设计模式；新增这一页则把这些思想延伸到大模型时代常见的 trainer-`rollout`-reward-`environment pool` 系统。
 
 ## 为什么需要分布式 RL？
 

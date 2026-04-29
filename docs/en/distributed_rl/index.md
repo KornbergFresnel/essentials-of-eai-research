@@ -6,7 +6,10 @@ Training RL agents at scale requires distributing computation across many machin
 
 1. **[Architecture Paradigms](architectures.md)** — A3C, Ape-X, IMPALA, SEED RL, and their design trade-offs
 2. **[Frameworks & Systems](frameworks.md)** — RLlib, Acme, EnvPool, Sample Factory, and other systems
-3. **[Practical Scaling Guide](practice.md)** — How to scale RL training effectively
+3. **[Large-Model RL Infrastructure](large_model_infra.md)** — Modern systems for RLHF, agentic RL, and embodied training
+4. **[Practical Scaling Guide](practice.md)** — How to scale RL training effectively
+
+The first two pages focus on classical distributed RL patterns. The new infrastructure page bridges those ideas to the trainer-`rollout`-reward-environment systems used in large-model RL.
 
 ## Why Distributed RL?
 
